@@ -111,9 +111,13 @@ export default class Menu extends Component {
 
     // clean up props
     const {$, ...profiles} = this.props.profiles;
-    const menuPadding = this.props.isOpen
+    const menuPadding = this.props.isOpen && !this.props.isLandscape
       ? {paddingTop: this.props.statusBarHeight}
       : {}
+      ;
+    const menuModifier = this.props.isLandscape
+      ? styles.menuLandscape
+      : styles.menuPortrait
       ;
 
     // prepend with `all packages` item if there is more than 2 profiles
@@ -125,7 +129,7 @@ export default class Menu extends Component {
 
     return (
       <View
-        style={[styles.menu, menuPadding]}>
+        style={[styles.menu, menuModifier, menuPadding]}>
 
         <View style={styles.menuMeta}>
           <View style={[styles.menuContainer, styles.menuContainerSpread]}>

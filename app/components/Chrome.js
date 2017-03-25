@@ -38,7 +38,12 @@ export default class Chrome extends Component {
   }
 
   onStatusBarSizeChange(statusBarHeight) {
-    this.setState({ statusBarHeight });
+    // something went south
+    if (!this.state.isLandscape && statusBarHeight === 0) {
+      return;
+    }
+    // on landscape it's always hidden
+    this.setState({ statusBarHeight: this.state.isLandscape ? 0 : statusBarHeight });
   }
 
   onLayoutChange(e) {
@@ -79,6 +84,7 @@ export default class Chrome extends Component {
       ref   : 'menu',
       style : styles.menu,
       isOpen: this.state.isMenuOpen,
+      isLandscape: this.state.isLandscape,
       statusBarHeight: this.state.statusBarHeight
     });
   }

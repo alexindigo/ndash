@@ -19,7 +19,7 @@
     "react": "15.4.2",
     "react-native": "0.42.3",
     "react-native-drawer": "^2.3.0",
-    "react-native-navbar": "^1.6.3",
+    "react-native-navbar": "^1.6.0",
     "react-native-status-bar-size": "^0.3.2"
   },
   "devDependencies": {
@@ -30,5 +30,28 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexindigo/ndash.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "app",
+    "ios",
+    "npm",
+    "node",
+    "modules",
+    "packages",
+    "dashboard",
+    "downloads",
+    "charts"
+  ],
+  "author": "Alex Indigo <iam@alexindigo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexindigo/ndash/issues"
+  },
+  "homepage": "https://github.com/alexindigo/ndash#readme"
 }

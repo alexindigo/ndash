@@ -102,6 +102,9 @@ export default {
     paddingBottom: 10,
     paddingHorizontal: 10
   },
+    menuLandscape: {
+      paddingTop: 0
+    },
   menuList: {
     flexGrow: 1
   },
