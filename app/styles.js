@@ -223,11 +223,12 @@ export default {
     justifyContent: 'space-between',
   },
   packagesHeaderProfile: {
-    flex: 1,
+    flex: 0,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   packagesProfileImage: {
+    flex: 0,
     width: 70,
     height: 70,
     marginRight: 15,
@@ -236,7 +237,7 @@ export default {
     borderColor: theme.main.decorationColor,
   },
   packageProfileUser: {
-    flex: 1,
+    flex: 0,
     flexDirection: 'column',
   },
   packageProfileUserName: {
@@ -247,7 +248,7 @@ export default {
     color: theme.tonedDown.foregroundColor,
   },
   packagesHeaderDownloads: {
-    flex: 1,
+    flex: 0,
     flexDirection: 'column',
     top: -2,
     minWidth: 125,
