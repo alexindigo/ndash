@@ -35,15 +35,23 @@ export default class Chrome extends Component {
     if (prevState.isMenuOpen !== this.state.isMenuOpen) {
       this.finishTransition();
     }
+
+    // update statusBarHeight
+    this.onStatusBarSizeChange(this.state.statusBarHeight);
   }
 
   onStatusBarSizeChange(statusBarHeight) {
-    // something went south
-    if (!this.state.isLandscape && statusBarHeight === 0) {
-      return;
+    // when landscape it's always `0`, since we hide status bar
+    // otherwise it's at least 20 for statusbar
+    statusBarHeight = this.state.isLandscape
+      ? 0
+      : Math.max(20, statusBarHeight)
+      ;
+
+    if (statusBarHeight != this.state.statusBarHeight) {
+      // on landscape it's always hidden
+      this.setState({ statusBarHeight });
     }
-    // on landscape it's always hidden
-    this.setState({ statusBarHeight: this.state.isLandscape ? 0 : statusBarHeight });
   }
 
   onLayoutChange(e) {
