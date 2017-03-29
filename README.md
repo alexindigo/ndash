@@ -2,7 +2,7 @@
 
 Your npm dashboard!
 
-[![Download on the App Store](resources/app_store.svg)](https://appsto.re/us/nY9Sib.i)
+[![Download on the App Store](resources/app_store.png)](https://appsto.re/us/nY9Sib.i)
 
 ## about
 
@@ -25,7 +25,4 @@ Source code available at [github.com/alexindigo/ndash](https://github.com/alexin
 
 ## screenshots
 
-<img src="resources/screenshots/001.png" width="200">
-<img src="resources/screenshots/002.png" width="200">
-<img src="resources/screenshots/003.png" width="200">
-<img src="resources/screenshots/004.png" width="200">
+<img src="resources/screenshots/001.png" width="200"> <img src="resources/screenshots/002.png" width="200"> <img src="resources/screenshots/003.png" width="200"> <img src="resources/screenshots/004.png" width="200">
