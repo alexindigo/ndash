@@ -1,4 +1,4 @@
-import { ActionSheetIOS, Linking } from 'react-native';
+import { ActionSheetIOS, Linking, Platform } from 'react-native';
 
 export { openUrl, shareUrl };
 

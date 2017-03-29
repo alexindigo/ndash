@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
   KeyboardAvoidingView,
+  Platform,
   View
 } from 'react-native';
 
@@ -43,7 +44,8 @@ export default class Chrome extends Component {
   onStatusBarSizeChange(statusBarHeight) {
     // when landscape it's always `0`, since we hide status bar
     // otherwise it's at least 20 for statusbar
-    statusBarHeight = this.state.isLandscape
+    // and Android isn't as flexible about it's StatusBar
+    statusBarHeight = this.state.isLandscape || Platform.OS == 'android'
       ? 0
       : Math.max(20, statusBarHeight)
       ;

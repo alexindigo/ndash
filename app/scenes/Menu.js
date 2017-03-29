@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Alert, AlertIOS, Image, ListView, Text, TouchableOpacity, View } from 'react-native';
+import { Image, ListView, Text, TouchableOpacity, View } from 'react-native';
 
 import Userpic from '../components/Userpic';
 import MenuButton from '../components/MenuButton';
 
+import Alert from '../lib/Alert';
 import styles from '../styles';
 
 export default class Menu extends Component {
@@ -25,7 +26,7 @@ export default class Menu extends Component {
   }
 
   addProfile() {
-    AlertIOS.prompt(
+    Alert.prompt(
       'add new profile',
       null,
       [

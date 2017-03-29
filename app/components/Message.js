@@ -38,6 +38,11 @@ export default class Message extends Component {
     this.runAnimation = () => {};
   }
 
+  onRequestClose() {
+    // can't do much about it
+    // it's un-interactive modal here
+  }
+
   render() {
 
     const spin = this._animatedValue.interpolate({
@@ -51,6 +56,7 @@ export default class Message extends Component {
         animationType="fade"
         visible={true}
         supportedOrientations={['portrait', 'landscape']}
+        onRequestClose={this.onRequestClose.bind(this)}
         >
         <StatusBar barStyle={styles.messageStatusBar.style} />
         <View

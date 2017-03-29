@@ -4,7 +4,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "postinstall": "rm ./node_modules/d3fc-*/.babelrc || true"
+    "postinstall": "rm ./node_modules/d3fc-*/.babelrc || true",
+    "android": "$(which emulator) -avd Nexus_5_API_23"
   },
   "dependencies": {
     "art": "^0.10.1",
@@ -20,6 +21,7 @@
     "react-native": "0.42.3",
     "react-native-drawer": "^2.3.0",
     "react-native-navbar": "^1.6.0",
+    "react-native-prompt-android": "0.0.5",
     "react-native-status-bar-size": "^0.3.2"
   },
   "devDependencies": {

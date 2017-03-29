@@ -9,7 +9,7 @@ import moment from 'moment';
 import AnimShape from './AnimShape';
 import { combine } from '../helpers/styles';
 
-import { modeMedian } from 'd3fc-sample';
+import { modeMedian } from '../vendor/d3fc-sample';
 
 import * as shape from 'd3-shape';
 import * as d3Array from 'd3-array';
@@ -37,7 +37,9 @@ export default class DownloadsChart extends React.Component {
     super(props);
 
     // https://github.com/d3fc/d3fc-sample
+console.log('-------modeMedian---------');
     this.sampler = modeMedian();
+console.log('---- WTF? -----');
     this.sampler.value((d) => d[1]);
 
     this.state = {

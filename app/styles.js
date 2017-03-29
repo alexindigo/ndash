@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 import theme from './theme';
 
@@ -134,14 +134,19 @@ export default {
   menuItem: {
     flex: 1,
     height: 50,
-    lineHeight: 50
+    lineHeight: 50,
   },
   menuItemIconless: {
     paddingLeft: 38
   },
   menuItemText: {
     color: theme.base.foregroundColor,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    ...Platform.select({
+      android: {
+        lineHeight: 31
+      },
+    })
   },
   menuProfileImage: {
     width: 30,
@@ -149,7 +154,12 @@ export default {
     marginRight: 10,
     borderRadius: 15,
     borderWidth: 1,
-    borderColor: theme.tonedDown.foregroundColor
+    borderColor: theme.tonedDown.foregroundColor,
+    ...Platform.select({
+      android: {
+        backgroundColor: theme.base.backgroundColor
+      },
+    })
   },
 
   menuProfileStatSingle: {
@@ -238,6 +248,11 @@ export default {
     borderRadius: 35,
     borderWidth: 1,
     borderColor: theme.main.decorationColor,
+    ...Platform.select({
+      android: {
+        backgroundColor: theme.main.backgroundColor
+      },
+    })
   },
   packageProfileUser: {
     flex: 0,
@@ -356,16 +371,26 @@ export default {
     top: 35,
     left: 20,
     fontSize: 10,
-    color: theme.base.accentColor
+    color: theme.base.accentColor,
   },
   packageName: {
     color: theme.main.textColor,
     lineHeight: 50,
     fontSize: 16,
+    ...Platform.select({
+      android: {
+        lineHeight: 35
+      },
+    })
   },
   packageVersion: {
     color: theme.tonedDown.foregroundColor,
-    lineHeight: 50
+    lineHeight: 50,
+    ...Platform.select({
+      android: {
+        lineHeight: 35
+      },
+    })
   },
   packageDownloads: {
     flex: 1,
@@ -378,17 +403,12 @@ export default {
     fontWeight: 'bold',
     textAlign: 'right',
     color: theme.base.foregroundColor,
-    backgroundColor: 'transparent'
-  },
-  packageDownloadsLastUpdate: {
-    position: 'absolute',
-    right: 0,
-    bottom: 5,
-    fontSize: 10,
-    lineHeight: 12,
-    textAlign: 'right',
-    color: theme.base.accentColor,
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    ...Platform.select({
+      android: {
+        bottom: -5
+      },
+    })
   },
 
   details: {

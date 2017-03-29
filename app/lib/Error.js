@@ -1,4 +1,4 @@
-import { Alert } from 'react-native';
+import Alert from './Alert';
 
 export default class Error {
 
