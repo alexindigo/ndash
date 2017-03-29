@@ -77,7 +77,7 @@ export default {
     lineHeight: 30,
     color: theme.base.foregroundColor,
     fontWeight: 'bold',
-    fontSize: 26
+    fontSize: 26,
   },
   backButtonImage: {
     width: 30,
@@ -86,7 +86,12 @@ export default {
     paddingVertical: 6,
     borderRadius: 15,
     borderWidth: 1,
-    borderColor: theme.main.decorationColor
+    borderColor: theme.main.decorationColor,
+    ...Platform.select({
+      android: {
+        backgroundColor: theme.emphasis.backgroundColor
+      },
+    })
   },
   navigationBar: {
     marginTop: 0

@@ -2,6 +2,8 @@
 
 Your npm dashboard!
 
+[![Download on the App Store](resources/app_store.svg)](https://appsto.re/us/nY9Sib.i)
+
 ## about
 
 This application allows you to see what your public node modules are up to,
@@ -20,3 +22,10 @@ This is not an official `npmjs.com` or `npms.io` app, just utilizes their public
 
 This application is released under the [MIT](LICENSE) license.
 Source code available at [github.com/alexindigo/ndash](https://github.com/alexindigo/ndash).
+
+## screenshots
+
+<img src="resources/screenshots/001.png" width="200">
+<img src="resources/screenshots/002.png" width="200">
+<img src="resources/screenshots/003.png" width="200">
+<img src="resources/screenshots/004.png" width="200">
