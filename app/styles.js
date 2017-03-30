@@ -105,7 +105,12 @@ export default {
     backgroundColor: theme.base.backgroundColor,
     paddingTop: 20,
     paddingBottom: 10,
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
+    ...Platform.select({
+      android: {
+        paddingTop: 0
+      }
+    })
   },
     menuLandscape: {
       paddingTop: 0
