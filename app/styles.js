@@ -668,7 +668,12 @@ export default {
     flexGrow: 1,
     maxHeight: 170,
     borderRadius: 5,
-    overflow: 'hidden'
+    overflow: 'hidden',
+    ...Platform.select({
+      android: {
+        maxHeight: 948 // TODO: Add workaround for ScrollView within ScrollView (ListView + ListView)
+      }
+    })
   },
 
   about: {
