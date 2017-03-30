@@ -37,6 +37,7 @@ export default class PackageMaintainers extends Component {
 
       return (
         <TouchableOpacity
+          style={styles.detailsMaintainersProfile}
           key={profile.username}
           onPress={() => this.setState({highlightedProfile: profile.username})}
           onLongPress={this.props.onActivateProfile.bind(this, profile)}

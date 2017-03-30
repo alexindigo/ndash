@@ -559,6 +559,18 @@ export default {
     alignItems: 'center',
     padding: 10,
     paddingRight: 0,
+    ...Platform.select({
+      android: {
+        paddingBottom: 0
+      }
+    })
+  },
+  detailsMaintainersProfile: {
+    ...Platform.select({
+      android: {
+        paddingBottom: 10
+      }
+    })
   },
   detailsMaintainersProfileImage: {
     width: 50,
@@ -582,18 +594,38 @@ export default {
     textAlign: 'center',
     backgroundColor: 'transparent',
     color: theme.base.accentColor,
+    ...Platform.select({
+      android: {
+        bottom: 0
+      }
+    })
   },
   detailsDependenciesSectionHeader: {
     flex: 1,
     padding: 5,
     paddingLeft: 10,
     backgroundColor: theme.main.highlightColor,
+    ...Platform.select({
+      android: {
+        minHeight: 20
+      }
+    })
   },
   detailsDependenciesSectionHeaderLabel: {
     fontSize: 12,
     fontWeight: 'bold',
     textAlign: 'left',
-    color: theme.tonedDown.foregroundColor
+    color: theme.tonedDown.foregroundColor,
+    ...Platform.select({
+      android: {
+        flex: 1,
+        top: 0,
+        paddingVertical: 10,
+        lineHeight: 1,
+        borderWidth: 1,
+        borderColor: theme.main.highlightColor, // keep it detailsDependenciesSectionHeader.backgroundColor
+      }
+    })
   },
   detailsDependenciesRow: {
       flex: 0,

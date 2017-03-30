@@ -24,6 +24,13 @@ function openUrl(url, onError) {
 
 function shareUrl(url, onError, onShare) {
 
+  // doesn't work on Android
+  // TODO: Come up with (global function) alternative
+  // Or rewrite this one to be more Reacty
+  if (Platform.OS != 'ios') {
+    return;
+  }
+
   const errorHandler = typeof onError == 'function' ? onError : console.error.bind(console);
   const shareHandler = typeof onShare == 'function' ? onShare : console.info.bind(console);
 
