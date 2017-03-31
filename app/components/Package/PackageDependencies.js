@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { ListView, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+
+import ListView from '../../lib/hacks/ListView';
 
 import ContentBlock from '../ContentBlock';
 import NamedBlock from '../NamedBlock';
@@ -107,6 +109,7 @@ export default class PackageDependencies extends Component {
             renderRow={this.renderRow.bind(this)}
             renderSectionHeader={this.renderSectionHeader.bind(this)}
             enableEmptySections={true}
+            sceneScrollView={this.props.sceneScrollView}
           />
 
         </ContentBlock>

@@ -37,9 +37,7 @@ export default class DownloadsChart extends React.Component {
     super(props);
 
     // https://github.com/d3fc/d3fc-sample
-console.log('-------modeMedian---------');
     this.sampler = modeMedian();
-console.log('---- WTF? -----');
     this.sampler.value((d) => d[1]);
 
     this.state = {

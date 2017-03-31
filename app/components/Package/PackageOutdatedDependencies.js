@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { ListView, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+
+import ListView from '../../lib/hacks/ListView';
 
 import ContentBlock from '../ContentBlock';
 import NamedBlock from '../NamedBlock';
@@ -85,6 +87,7 @@ export default class PackageOutdatedDependencies extends Component {
             dataSource={this.dependenciesList.cloneWithRows(dependencies)}
             renderRow={this.renderRow.bind(this)}
             enableEmptySections={true}
+            sceneScrollView={this.props.sceneScrollView}
           />
 
         </ContentBlock>
