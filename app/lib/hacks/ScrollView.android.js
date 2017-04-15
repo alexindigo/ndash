@@ -9,17 +9,13 @@ export default class ScrollViewAndroid extends ScrollView {
 
   disableScroll(disable) {
     this.setState({enableScrollViewScroll: !disable});
-console.log('trying not to scrolll', !disable);
   }
-// //this.setState({ enableScrollViewScroll: true})
+
   render() {
-console.log('+++ scrollProperties? +++', this.state.enableScrollViewScroll);
     return (
       <View
         style={{flex: 1}}
-        onStartShouldSetResponderCapture={
-          () => console.log('-render log-')
-        }
+        onStartShouldSetResponderCapture={() => this.disableScroll(false)}
         >
         <ScrollView
           {...this.props}
