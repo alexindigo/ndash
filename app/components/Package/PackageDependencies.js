@@ -102,6 +102,7 @@ export default class PackageDependencies extends Component {
 
           <ListView
             style={styles.detailsDependenciesList}
+            contentContainerStyle={styles.detailsDependenciesListContent}
             initialListSize={10}
             pageSize={10}
             scrollRenderAheadDistance={10}
