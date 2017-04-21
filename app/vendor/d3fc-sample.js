@@ -249,8 +249,6 @@ var modeMedian = function () {
         return [].concat([data[0]], subsampledData, [data[data.length - 1]]);
     };
 
-console.log('modeMedianSampler++', modeMedianSampler);
-console.log('dataBucketer++', dataBucketer);
     d3fcRebind.rebind(modeMedianSampler, dataBucketer, 'bucketSize');
 
     modeMedianSampler.value = function (x) {

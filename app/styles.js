@@ -10,7 +10,8 @@ export default {
   },
 
   statusBar: {
-    style: 'light-content'
+    style: 'light-content',
+    backgroundColor: theme.base.backgroundColor
   },
     messageStatusBar: {
       style: 'default'
@@ -355,8 +356,8 @@ export default {
   packagesTotal: {
     position: 'absolute',
     right: 15,
-    bottom: -10,
-    fontSize: 42,
+    bottom: -9,
+    fontSize: 40,
     fontWeight: 'bold',
     textAlign: 'right',
     color: theme.base.accentColor,
@@ -668,10 +669,12 @@ export default {
     flexGrow: 1,
     maxHeight: 170,
     borderRadius: 5,
-    overflow: 'hidden',
+    overflow: 'hidden'
+  },
+  detailsDependenciesListContent: {
     ...Platform.select({
       android: {
-        maxHeight: 948 // TODO: Add workaround for ScrollView within ScrollView (ListView + ListView)
+        paddingBottom: 20
       }
     })
   },

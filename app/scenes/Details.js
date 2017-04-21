@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import { Alert, ScrollView, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import moment from 'moment';
+
+import Alert from '../lib/Alert';
+import ScrollView from '../lib/hacks/ScrollView';
 
 import TimeFromNow from '../components/TimeFromNow';
 
@@ -68,6 +71,7 @@ export default class DetailsScene extends Component {
 
     return (
       <ScrollView
+        ref="sceneScrollView"
         style={styles.details}
         contentContainerStyle={styles.detailsContainer}
         showsVerticalScrollIndicator={false}
@@ -95,11 +99,13 @@ export default class DetailsScene extends Component {
         <PackageOutdatedDependencies
           package={pkg}
           details={details}
+          sceneScrollView={this.refs.sceneScrollView}
           />
 
         <PackageDependencies
           package={pkg}
           details={details}
+          sceneScrollView={this.refs.sceneScrollView}
           />
 
         <PackageLinks package={pkg} details={details} />
