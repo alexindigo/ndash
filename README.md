@@ -2,7 +2,8 @@
 
 Your npm dashboard!
 
-[![Download on the App Store](resources/app_store.png)](https://appsto.re/us/nY9Sib.i)
+[![Download on the App Store](resources/app_store_download_button.png)](https://appsto.re/us/nY9Sib.i)
+[![Download on the Google Play](resources/google_play_download_button.png)](https://play.google.com/store/apps/details?id=com.ndash)
 
 ## about
 

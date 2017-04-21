@@ -15,3 +15,6 @@
 - Generate app icons here at [makeappicon.com](http://makeappicon.com/)
 
 - How to put app to the AppStore: [medium.com/react-native-development/deploying-a-react-native-app-for-ios-pt-1-a79dfd15acb8](https://medium.com/react-native-development/deploying-a-react-native-app-for-ios-pt-1-a79dfd15acb8)
+
+- How to publish to the Google Play:
+[android.jlelse.eu/preparing-a-reach-native-android-app-for-production-f063413d5633](https://android.jlelse.eu/preparing-a-reach-native-android-app-for-production-f063413d5633)
