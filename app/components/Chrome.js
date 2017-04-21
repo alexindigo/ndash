@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import {
+  BackAndroid,
   KeyboardAvoidingView,
   Platform,
+  StatusBar,
   View
 } from 'react-native';
 
@@ -24,10 +26,12 @@ export default class Chrome extends Component {
   }
 
   componentDidMount() {
+    BackAndroid.addEventListener('hardwareBackPress', this.onHardwareBack.bind(this));
     StatusBarSizeIOS.addEventListener('willChange', this.onStatusBarSizeChange.bind(this));
   }
 
   componentWillUnmount() {
+    BackAndroid.removeEventListener('hardwareBackPress', this.onHardwareBack.bind(this));
     StatusBarSizeIOS.removeEventListener('willChange', this.onStatusBarSizeChange.bind(this));
   }
 
@@ -39,6 +43,20 @@ export default class Chrome extends Component {
 
     // update statusBarHeight
     this.onStatusBarSizeChange(this.state.statusBarHeight);
+  }
+
+  onHardwareBack() {
+    if (this.state.isMenuOpen) {
+      this.setState({ isMenuOpen: false });
+      return true;
+    }
+
+    if (this.state.backRoute) {
+      this.state.backRoute();
+      return true;
+    }
+
+    return false;
   }
 
   onStatusBarSizeChange(statusBarHeight) {
@@ -130,6 +148,9 @@ export default class Chrome extends Component {
         style={styles.base}
         onLayout={this.onLayoutChange.bind(this)}
         >
+        <StatusBar
+          backgroundColor={styles.statusBar.backgroundColor}
+          />
         <Drawer
           disabled={this.props.isSplash}
           open={this.state.isMenuOpen}
