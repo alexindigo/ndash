@@ -10,7 +10,7 @@ addons:
 jdk:
   - oraclejdk8
 script:
-  - sonar-scanner -X
+  - sonar-scanner
 cache:
   directories:
     - $HOME/.sonar/cache

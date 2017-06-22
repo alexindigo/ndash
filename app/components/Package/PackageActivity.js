@@ -17,7 +17,7 @@ export default class PackageActivity extends Component {
 
     const commits = details.collected && details.collected.github && details.collected.github.commits;
     let rangeCount = 0;
-    let rangePeriod;
+//    let rangePeriod;
 
     if (!commits) {
       return '--';
@@ -27,7 +27,7 @@ export default class PackageActivity extends Component {
 
     commits.some(({from, to, count}) => {
       rangeCount = count;
-      rangePeriod = {from, to};
+//      rangePeriod = {from, to};
       return count > 0;
     });
 
@@ -35,7 +35,6 @@ export default class PackageActivity extends Component {
   }
 
   render() {
-    const pkg = this.props.package;
     const details = this.props.details || {};
 
     return (

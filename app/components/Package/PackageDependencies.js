@@ -52,15 +52,14 @@ export default class PackageDependencies extends Component {
   render() {
     const source = {};
 
-    const pkg = this.props.package;
     const details = this.props.details || {};
 
     if (!details.latestVersion || (!details.latestVersion.dependencies && !details.latestVersion.devDependencies)) {
       return null;
     }
 
-    const dependencies = Object.entries(details.latestVersion.dependencies || {}) || [];
-    const devDependencies = Object.entries(details.latestVersion.devDependencies || {}) || [];
+    const dependencies = Object.entries(details.latestVersion.dependencies || {});
+    const devDependencies = Object.entries(details.latestVersion.devDependencies || {});
 
     // another filter for badly formatted data
     // some of the deps lists are empty objects

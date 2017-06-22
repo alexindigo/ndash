@@ -70,7 +70,7 @@ export default class Api {
     },
     function(error, result)
     {
-      if (error) {
+      if (error || !result) {
         callback(error || 'unable to fetch package downloads by day for [' + packageId + '] package');
         return;
       }
