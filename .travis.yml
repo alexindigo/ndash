@@ -6,8 +6,7 @@ addons:
     branches:
       - sonarcloud
       - master
-    token:
-      - secure: "wZgywzPRHDgZOj5WCJC38TuJrgPy5Mpephbnj3r1ZEOZ2BiwKDtNX2PZt325ONTYggQ593Y2RLj4dKuxStelFq19IEv3rcDIGZ3GjeHb7cYhTlWahC7bsrZXZIOGf3EZ+b7gywz/QrRpIJFIAv74wxGt4A8L3ic0qQGt8OghtwYyq2s3G5wNeejwtAt96q6Yg+Gz+9509kDTCVIbuphtipAdc/EzGGp5nUAXeg0CLT8EVdUsfwxC7W7lFmRCL3+sKevOC5AWeC7dNK/QnmvLj6bB9e438nFkF2aLGH10mT5Fe6fE7x9jfQIclFKrqxQxVJGPacS/2Hgvy+Opdiyq8zVB5OqfOgn2hI0kk+6Y6TrGfXGVATKl26oSG0Y1Jy2SGLK+Qihdt3/azzROk+qyOHzk5bPU7qmtthvUhsK/DegkPX12JhxO5kaJXwVInqzvQ2a1aSjmUeR5WkMJWftlZT5zx1kEKHep2kYGrlxhtgbp6NWRMLS7AnQqHOWtWbCIOxouJqVFt0zGuLkbuaHn1hFx68vSCHVMcZkoMjXvGKlJ7ixN+JzReGHUQT6mXPt43wtXuNPdW0CxZJFnC/BpYR8jpBsl7MEwfN2Td4mE8ZU8qksVRyKn04D7VfHsG/O4nUCEWLtntAkJFBPR/Eg0kEVebu6e9RAKK30qZ/VXJIQ="
+    token: $SONAR_TOKEN
 jdk:
   - oraclejdk8
 script:
