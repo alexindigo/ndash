@@ -1,0 +1,5 @@
+“Start by adding new profile” - “Lisa uus profiil”
+“Reset all data” - “kustuta kõik”
+Short: npm moodulite jälgimine
+Long: See äpp jälgib teie ja teie koostöötajate avalikute node moodulite seisundi.
+Disclaimer: See äpp ei ole ametlik npmjs.com või npms.io projekt, ta kasutab nende API.
