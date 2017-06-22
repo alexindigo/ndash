@@ -3,23 +3,17 @@ import {
   ART,
   LayoutAnimation,
 } from 'react-native';
+import Morph from 'art/morph/path';
 
 const {
   Shape,
 } = ART;
 
-import Morph from 'art/morph/path';
-
-type Props = {
-  color: any,
-  d: () => any,
-};
-
 const AnimationDurationMs = 250;
 
 export default class AnimShape extends React.Component {
 
-  constructor(props: Props) {
+  constructor(props) {
     super(props);
     this.state = {
       path: '',

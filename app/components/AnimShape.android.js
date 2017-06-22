@@ -7,15 +7,9 @@ const {
   Shape,
 } = ART;
 
-
-type Props = {
-  color: any,
-  d: () => any,
-};
-
 export default class AnimShape extends React.Component {
 
-  constructor(props: Props) {
+  constructor(props) {
     super(props);
     this.state = {
       path: '',
