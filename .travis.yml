@@ -3,6 +3,9 @@ sudo: required
 addons:
   sonarcloud:
     organization: alexindigo-github
+    branches:
+      - sonarcloud
+      - master
     token:
       - secure: >-
           1z3PRFqNalBd9ml0k631b594Iqvwq03W2IXWIWpm9Hb0BKYPRlwcpmzl/QwqRyXzEATi0ux8sHG0viv8zKM/zuD73gfhZ+QuwVUH2Srxghaszypx/2eazFxBWF/EBwhG3S/77qd92YfOaSyIqvnxhWOGu1ppYFme2X2p/Jt+22QosLqg23SrIuH3MAAv9MorVwQSfHeAXTotTthsS8R1ABJD3ySVIyMSLsfGeETeNxy+8ETbmxfc4w5ZxNzQqhFNhgykuT85k/D3IJdKT9Tzr5ly4pwtoNUIF/fMf8bM4t1pmGUtorVacb2xP96rMSByYibOiYxRebeTD3eNsosxrNGzT+CYlzy2Qhg+qtFh0NStTUn5jBVuAGCwmECJFnzE8OkFnSVtDcdEOOkoKMQk8lx8/kHYDwylf3uhjXKGFwiMEnoTIHRhsrXZ2ncgmajYQ2t/4cva/VqzKZtHNXcETZN/lykhE7JQS33geIoctiMxSvyVDexSnAkk/IgQjd6giCNss+5ZiHf9wJFcZbF4+TAuGKCrOO97fzrzcoekWu85EKnXGT8FLdynS3+5KWRzKeg1Ar++eFX73P33SloEy787GmiE/EWqHr7tyPy8jOxRU9H8BFc8IJGu3bUkXp2gkpMjHGprrKIG1SQSEX6XZOF8aspTYA1xoe9vKML3HDk=
