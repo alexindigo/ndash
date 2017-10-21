@@ -204,7 +204,7 @@ class ProfileItem extends Component {
     }
 
     return (
-      <MenuItem action={this.props.action}>
+      <MenuItem action={this.props.action} accessible={true} accessibilityLabel={`Profile: ${this.props.profile.handle}`}>
         <View style={styles.menuContainer}>
           <Userpic
             style={styles.menuProfileImage}
@@ -242,7 +242,7 @@ class ProfileItem extends Component {
 class MenuItem extends Component {
   render () {
     return (
-      <TouchableOpacity style={{flex: 1}} onPress={this.props.action}>
+      <TouchableOpacity style={{flex: 1}} onPress={this.props.action} accessible={this.props.accessible} accessibilityLabel={this.props.accessibilityLabel}>
         {this.props.children}
       </TouchableOpacity>
     );
