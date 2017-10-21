@@ -4,7 +4,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "android": "$(which emulator) -avd Nexus_5_API_23"
+    "android": "$(which emulator) -avd Nexus_5_API_23",
+    "functional": "wdio wdio.conf.js"
   },
   "dependencies": {
     "art": "^0.10.1",
@@ -26,7 +27,11 @@
     "babel-jest": "19.0.0",
     "babel-preset-react-native": "1.9.1",
     "jest": "19.0.2",
-    "react-test-renderer": "15.4.2"
+    "react-test-renderer": "15.4.2",
+    "wdio-appium-service": "^0.2.3",
+    "wdio-jasmine-framework": "^0.3.2",
+    "wdio-spec-reporter": "^0.1.2",
+    "webdriverio": "^4.8.0"
   },
   "jest": {
     "preset": "react-native"

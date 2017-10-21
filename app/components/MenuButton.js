@@ -35,7 +35,11 @@ export default class MenuButton extends Component {
     }
 
     return (
-      <TouchableOpacity onPress={this.props.action}>
+      <TouchableOpacity
+        onPress={this.props.action}
+        accessible={this.props.accessible}
+        accessibilityLabel={this.props.accessibilityLabel}
+        >
         <Image
           style={this.props.style}
           source={image}

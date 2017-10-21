@@ -28,6 +28,8 @@ export default class Navbar extends Component {
     };
 
     const homeButton = <HomeButton
+      accessible={true}
+      accessibilityLabel={'Home button'}
       onAction={this.props.onHomeButton}
       style={styles.homeButton}
       />;
