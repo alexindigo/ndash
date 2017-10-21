@@ -141,6 +141,8 @@ export default class Menu extends Component {
               : <MenuButton
                   style={[styles.menuButton, styles.menuButtonRight]}
                   image="add_profile"
+                  accessible={true}
+                  accessibilityLabel={'Add profile button'}
                   action={this.addProfile.bind(this)}
                   />
             }
