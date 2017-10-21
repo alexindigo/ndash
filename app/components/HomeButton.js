@@ -15,6 +15,8 @@ export default class HomeButton extends Component {
     return (
       <TouchableOpacity
         onPress={this.props.onAction}
+        accessible={this.props.accessible}
+        accessibilityLabel={this.props.accessibilityLabel}
         >
         <View
           style={stylesContainer}
