@@ -4,6 +4,7 @@ Your npm dashboard!
 
 [![Download on the App Store](resources/app_store_download_button.png)](https://appsto.re/us/nY9Sib.i)
 [![Download on the Google Play](resources/google_play_download_button.png)](https://play.google.com/store/apps/details?id=com.ndash)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Falexindigo%2Fndash.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Falexindigo%2Fndash?ref=badge_shield)
 
 ## about
 
@@ -27,3 +28,7 @@ Source code available at [github.com/alexindigo/ndash](https://github.com/alexin
 ## screenshots
 
 <img src="resources/screenshots/001.png" width="200"> <img src="resources/screenshots/002.png" width="200"> <img src="resources/screenshots/003.png" width="200"> <img src="resources/screenshots/004.png" width="200">
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Falexindigo%2Fndash.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Falexindigo%2Fndash?ref=badge_large)
